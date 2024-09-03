@@ -26,7 +26,7 @@
         </Grid.RowDefinitions>
         <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="5" Grid.RowSpan="7"/>
         <StackPanel x:Name="ToDoWindow" Grid.ColumnSpan="5" Grid.RowSpan="6" Grid.Row="1">
-            <DataGrid x:Name="ToDoList" AutoGenerateColumns="False" Grid.Row="4" FontSize="15" FontFamily="Cascadia Code" MouseRightButtonDown="ToDoList_MouseRightButtonDown" CanUserResizeRows="False" AreRowDetailsFrozen="True" BorderBrush="{x:Null}" Background="{x:Null}">
+            <DataGrid x:Name="ToDoList" AutoGenerateColumns="False" Grid.Row="4" FontSize="15" FontFamily="Cascadia Code" CanUserResizeRows="False" AreRowDetailsFrozen="True" BorderBrush="{x:Null}" Background="{x:Null}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Path = CreationDate}" IsReadOnly="True" Header="Дата" Width="180" CanUserResize="False"/>
                     <DataGridCheckBoxColumn x:Name="DoneColumn" Binding="{Binding Path = IsDone, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Header="Готово?" Width="70" CanUserResize="False"/>
