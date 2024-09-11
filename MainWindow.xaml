@@ -26,6 +26,9 @@
         </Grid.RowDefinitions>
         <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="5" Grid.RowSpan="7"/>
         <StackPanel x:Name="ToDoWindow" Grid.ColumnSpan="5" Grid.RowSpan="6" Grid.Row="1">
+            <ScrollViewer x:Name="Scroll"
+                          CanContentScroll="True"
+                          Height="440">
             <DataGrid x:Name="ToDoList" AutoGenerateColumns="False" Grid.Row="4" FontSize="15" FontFamily="Cascadia Code" CanUserResizeRows="False" AreRowDetailsFrozen="True" BorderBrush="{x:Null}" Background="{x:Null}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Path = CreationDate}" IsReadOnly="True" Header="Дата" Width="180" CanUserResize="False"/>
@@ -39,6 +42,7 @@
                     </DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
+            </ScrollViewer>
         </StackPanel>
         <StackPanel x:Name="ToolbarPanel" Grid.ColumnSpan="5" Background="#52506e" MouseLeftButtonDown="ToolbarPanel_MouseLeftButtonDown">
             <Button x:Name="CloseButton" HorizontalAlignment="Right" Margin="2" Width="20" Height="20" Background="#8c373c" BorderThickness="1" BorderBrush="#262533" Click="CloseButton_Click" MouseEnter="CloseButton_MouseEnter" MouseLeave="CloseButton_MouseLeave">
